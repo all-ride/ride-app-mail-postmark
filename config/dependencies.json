@@ -1,0 +1,78 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "ride\\library\\mail\\transport\\Transport",
+            "class": "ride\\library\\mail\\transport\\PostmarkTransport",
+            "id": "postmark",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "log",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\log\\Log"
+                            }
+                        },
+                        {
+                            "name": "apiKey",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "mail.postmark.apikey"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setDefaultFrom",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "mail.from"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setDefaultReplyTo",
+                    "arguments": [
+                        {
+                            "name": "replyTo",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "mail.reply"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setDefaultBcc",
+                    "arguments": [
+                        {
+                            "name": "bcc",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "mail.bcc"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setDebugTo",
+                    "arguments": [
+                        {
+                            "name": "to",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "mail.debug"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
